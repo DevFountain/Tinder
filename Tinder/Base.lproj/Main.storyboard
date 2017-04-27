@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,64 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_bar" translatesAutoresizingMaskIntoConstraints="NO" id="cHN-G0-1cW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="v5y-He-dcD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-3e-IbZ">
+                                <rect key="frame" x="0.0" y="563" width="375" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="TFK-jD-v20"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="ats-ME-ugA">
+                                <rect key="frame" x="35" y="182" width="304" height="304"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="304" id="6oE-7y-ZSy"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="304" id="go5-vQ-eHu"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gMF-E0-oCJ" appends="YES" id="Fs3-af-oFm"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vJU-3e-IbZ" secondAttribute="trailing" constant="-16" id="ANt-oG-y5g"/>
+                            <constraint firstItem="ats-ME-ugA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="EHl-mq-7Jh"/>
+                            <constraint firstItem="cHN-G0-1cW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Mv2-Da-xw2"/>
+                            <constraint firstItem="ats-ME-ugA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YfC-OB-DSL"/>
+                            <constraint firstItem="ats-ME-ugA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aqG-Mo-Edd"/>
+                            <constraint firstItem="cHN-G0-1cW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="d8v-bB-Vv0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cHN-G0-1cW" secondAttribute="trailing" constant="-16" id="dS9-OU-AYa"/>
+                            <constraint firstItem="vJU-3e-IbZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ats-ME-ugA" secondAttribute="bottom" constant="8" id="f2Q-RW-gRd"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ats-ME-ugA" secondAttribute="trailing" constant="8" id="gga-Hs-9Pr"/>
+                            <constraint firstItem="ats-ME-ugA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cHN-G0-1cW" secondAttribute="bottom" constant="8" id="kMc-hD-rvF"/>
+                            <constraint firstItem="vJU-3e-IbZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="lfK-2p-mPE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vJU-3e-IbZ" secondAttribute="bottom" constant="-4" id="qXr-hi-B9D"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainProfileImageView" destination="ats-ME-ugA" id="P91-Ns-G7I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="gMF-E0-oCJ">
+                    <connections>
+                        <action selector="onPanGesture:" destination="BYZ-38-t0r" id="ITx-uk-nAu"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="action_buttons" width="320" height="108"/>
+        <image name="nav_bar" width="320" height="65"/>
+        <image name="ryan" width="449" height="514"/>
+    </resources>
 </document>

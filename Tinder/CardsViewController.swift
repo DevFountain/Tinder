@@ -10,6 +10,10 @@ import UIKit
 
 class CardsViewController: UIViewController {
 
+    @IBOutlet weak var mainProfileImageView: UIImageView!
+
+    var mainProfileImageInitialCenter: CGPoint!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +24,15 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onPanGesture(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: view)
+
+        if sender.state == .began {
+            mainProfileImageInitialCenter = mainProfileImageView.center
+        } else if sender.state == .changed {
+            mainProfileImageView.center = CGPoint(x: mainProfileImageInitialCenter.x + translation.x, y: mainProfileImageInitialCenter.y)
+        }
+    }
 
 }
 

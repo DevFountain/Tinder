@@ -14,6 +14,8 @@ class DraggableImageView: UIView {
 
     @IBOutlet weak var imageView: UIImageView!
 
+    var mainProfileImageInitialCenter: CGPoint!
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initSubviews()
@@ -27,8 +29,22 @@ class DraggableImageView: UIView {
     func initSubviews() {
         let nib = UINib(nibName: "DraggableImageView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
+
         contentView.frame = bounds
         addSubview(contentView)
+
+        imageView.frame = contentView.bounds
+        contentView.addSubview(imageView)
+    }
+
+    @IBAction func onPanGesture(_ sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: contentView)
+
+        if sender.state == .began {
+            mainProfileImageInitialCenter = imageView.center
+        } else if sender.state == .changed {
+            imageView.center = CGPoint(x: mainProfileImageInitialCenter.x + translation.x, y: mainProfileImageInitialCenter.y)
+        }
     }
 
 }

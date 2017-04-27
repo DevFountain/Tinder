@@ -20,20 +20,23 @@
             <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-X7-ufx">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBc-X7-ufx">
                     <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="pgR-KZ-9Nc" appends="YES" id="d0e-z3-0XJ"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="bBc-X7-ufx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1aC-do-467"/>
-                <constraint firstItem="bBc-X7-ufx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="93g-A0-YKk"/>
-                <constraint firstAttribute="bottom" secondItem="bBc-X7-ufx" secondAttribute="bottom" id="WAw-Tx-wbf"/>
-                <constraint firstAttribute="trailing" secondItem="bBc-X7-ufx" secondAttribute="trailing" id="flj-WF-WS2"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="25" y="-84"/>
         </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="pgR-KZ-9Nc">
+            <connections>
+                <action selector="onPanGesture:" destination="-1" id="iYr-Ay-GAH"/>
+            </connections>
+        </panGestureRecognizer>
     </objects>
 </document>

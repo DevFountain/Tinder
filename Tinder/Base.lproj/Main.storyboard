@@ -36,9 +36,6 @@
                                     <constraint firstAttribute="width" constant="304" id="ffF-YH-RS3"/>
                                     <constraint firstAttribute="height" constant="304" id="tBG-EF-GqH"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="fLv-ck-1Lj" appends="YES" id="bQq-7M-BnR"/>
-                                </connections>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="vJU-3e-IbZ">
                                 <rect key="frame" x="0.0" y="563" width="375" height="108"/>
@@ -64,11 +61,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="fLv-ck-1Lj">
-                    <connections>
-                        <action selector="onPanGesture:" destination="BYZ-38-t0r" id="V60-f1-CUf"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>

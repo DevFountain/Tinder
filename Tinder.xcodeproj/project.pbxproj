@@ -12,6 +12,8 @@
 		E98FBD901EB1894800A85A5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98FBD8E1EB1894800A85A5B /* Main.storyboard */; };
 		E98FBD921EB1894800A85A5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E98FBD911EB1894800A85A5B /* Assets.xcassets */; };
 		E98FBD951EB1894800A85A5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E98FBD931EB1894800A85A5B /* LaunchScreen.storyboard */; };
+		E9CD51D91EB1954D00DF8B7B /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD51D81EB1954D00DF8B7B /* DraggableImageView.swift */; };
+		E9CD51DB1EB1955900DF8B7B /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CD51DA1EB1955900DF8B7B /* DraggableImageView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E98FBD911EB1894800A85A5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E98FBD941EB1894800A85A5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E98FBD961EB1894800A85A5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CD51D81EB1954D00DF8B7B /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		E9CD51DA1EB1955900DF8B7B /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				E98FBD8A1EB1894800A85A5B /* AppDelegate.swift */,
 				E98FBD8C1EB1894800A85A5B /* CardsViewController.swift */,
+				E9CD51D81EB1954D00DF8B7B /* DraggableImageView.swift */,
+				E9CD51DA1EB1955900DF8B7B /* DraggableImageView.xib */,
 				E98FBD8E1EB1894800A85A5B /* Main.storyboard */,
 				E98FBD911EB1894800A85A5B /* Assets.xcassets */,
 				E98FBD931EB1894800A85A5B /* LaunchScreen.storyboard */,
@@ -125,6 +131,7 @@
 			files = (
 				E98FBD951EB1894800A85A5B /* LaunchScreen.storyboard in Resources */,
 				E98FBD921EB1894800A85A5B /* Assets.xcassets in Resources */,
+				E9CD51DB1EB1955900DF8B7B /* DraggableImageView.xib in Resources */,
 				E98FBD901EB1894800A85A5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98FBD8D1EB1894800A85A5B /* CardsViewController.swift in Sources */,
+				E9CD51D91EB1954D00DF8B7B /* DraggableImageView.swift in Sources */,
 				E98FBD8B1EB1894800A85A5B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +307,7 @@
 				E98FBD9B1EB1894800A85A5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

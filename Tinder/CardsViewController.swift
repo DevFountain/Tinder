@@ -16,7 +16,7 @@ class CardsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        mainProfileImageView.imageView.image = UIImage(named: "ryan")
+        mainProfileImageView.image = UIImage(named: "ryan")
     }
 
     override func didReceiveMemoryWarning() {

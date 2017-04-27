@@ -24,18 +24,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="304" height="304"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="pgR-KZ-9Nc" appends="YES" id="d0e-z3-0XJ"/>
-                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Rtj-NY-bwq" appends="YES" id="fqn-Ol-vwB"/>
+            </connections>
             <point key="canvasLocation" x="25" y="-84"/>
         </view>
-        <panGestureRecognizer minimumNumberOfTouches="1" id="pgR-KZ-9Nc">
+        <panGestureRecognizer minimumNumberOfTouches="1" id="Rtj-NY-bwq">
             <connections>
-                <action selector="onPanGesture:" destination="-1" id="iYr-Ay-GAH"/>
+                <action selector="onPanGesture:" destination="-1" id="dYX-6h-Lgu"/>
             </connections>
         </panGestureRecognizer>
     </objects>
